@@ -25,7 +25,6 @@
 		 */
 		public function doInsertRequestInvitation(Request $request)
 		{
-
 			$objectServiceInvitation
 				= new ServiceInvitation($this->getDoctrine()->getManager(),
 				Invitation::class);
