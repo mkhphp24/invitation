@@ -1,8 +1,8 @@
 # invitation create DataBase
 Step 1:
-         bin/console doctrine:database:create
+         bin/console doctrine:database:create 
          bin/console make:entity
-         bin/console make:migration
+         bin/console make:migration 
          bin/console d:mig:mig
 
 
@@ -20,8 +20,8 @@ Step 3:
 # invitation Api Route
  
        @Route("/api/invitation/request/",  methods={"POST","HEAD"})
-		   @Route("/api/invitation/accept/" ,  methods={"PUT","HEAD"})
-		   @Route("/api/invitation/cancel/" ,  methods={"PUT","HEAD"})
+       @Route("/api/invitation/accept/" ,  methods={"PUT","HEAD"})
+       @Route("/api/invitation/cancel/" ,  methods={"PUT","HEAD"})
 
 # invitation JWT login
 
