@@ -1,9 +1,12 @@
 # invitation create DataBase
 Step 1:
-         bin/console doctrine:database:create 
-         bin/console make:entity
-         bin/console make:migration 
-         bin/console d:mig:mig
+        bin/console doctrine:database:create 
+        
+        bin/console make:entity
+        
+        bin/console make:migration 
+       
+        bin/console d:mig:mig
 
 
 # invitation make user
