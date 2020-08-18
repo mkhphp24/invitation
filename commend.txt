@@ -1,0 +1,40 @@
+address site marja
+https://medium.com/@h.benkachoud/symfony-rest-api-without-fosrestbundle-using-jwt-authentication-part-2-be394d0924dd
+
+https://travistidwell.com/jsencrypt/demo/
+be vasile in site key private and public ijad mikonim 
+va bad copy mikonim to 
+config/jwt/private.pem & config/jwt/public.pem
+
+bayad in bunddle nasb konim 
+https://github.com/chalasr/lexik-jwt-authentication-sandbox
+
+
+ba post man emtahan mikonim 
+ye user misazim mitonim as registeri estefade konim 
+http://localhost:8000/api/register/
+method post ==== body === row === json 
+{"username":"admin" , "password":"123456","email":"majid@gmail.com"}
+
+dar akhar ye user ijad mikone to database to tabel user .
+
+2-http://localhost:8000/api/login_check 
+method post ==== body === row === json 
+ {"username":"admin" , "password":"123456"}
+age dorost bashe ye reshte tokien ba json bar migardone .
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTA1ODEwMTcsImV4cCI6MTU5MDU4NDYxNywicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWRtaW4ifQ.AzMynigiPxAEedWdZILz1sl-UYnjKi3M0QSI0m2XeQDbSsXdPi3qmHUxdsD8gHuCKslzkbxGK82b8abC8JxvfxCuhDFDnMdFDieXCEqVT12TNmphztTgBt83oEPgIXiF5ilelgb1_G44-gYSu8W3NqWsqIAYM3NrOGTMY6SK59IakqIScnwUBIR9kcO_FCEhyyASJK-aJVPKPQINCW9MR7trKb6W5zcEL49L05Lg-St09XQGogM0BeZNmRWO1-RysEWVyMCBhnqqlQBXRe1_74uVqvI59EqgAgmMBHxp-d2O4RZt0p5WyFu8CPrXS88S1Zp1OZnbK0zJ5ApIkoTonA"
+}
+
+
+3-
+hala baray autentication page faghat be in reshte niyaz darim vaghti mikhaym be routi ro seda bezanim in token to autorizetion mifrestim 
+to post man darim 
+url:http://localhost:8000/api/test
+tab header : 
+key=Content-Type valuse=application/json
+key=Authorization valuse=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE1OTA1NzkxMDEsImV4cCI6MTU5MDU4MjcwMSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiYWRtaW4ifQ.GpqMrzqzfpLWZBrEL6m081XHEcj3blvL0QAw31GgoPvuFLUISC9dGmJKq2t-199co4YAXAMfrjAkPTYOoJtShmSWbYgUZNC-CXzuvDilObKF-Qc8yCroTdXx2VWyodAwq52-WCre9ckR_hF5qymTg3j_Mo4dvBhgWjTN1WPY7znzuvzu_CWki5R3_Jgg-dsGb79QoHQirlvuq5-HCXg6HGW9lIS4D-d35HHIKjwJIE93YcTuILN41cvsllq7uzY0QxYlzIkId1KUqKxmEkb4ePi9BTziNPY1Xa-NoT36CLfIOSMT8L9uZ6t1pc0lWCfaWDF1EH1JSL6F7iHxSiPRiA
+
+vaghti ersal mishe token to header mire va etebar sanji mishe bad as "Bearer" meghdar tokeni ke to marhale login check gereftim o gharar midim age bekhay bedon in header be http://localhost:8000/api/test dastrasi peyda konim khata mide va khroji nemide 
+behtar tokeni ke migirim az marhale login/check to ye cooki zakhire konim halla har vaght ke bekhay be routi dast rasi peydakonim cooki o mikhonim mizarim to heder bad darkhasto resal mikonim . 
