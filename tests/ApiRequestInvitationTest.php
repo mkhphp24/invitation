@@ -16,8 +16,8 @@
 
 		/** @var Client $client */
 		protected $client;
-        protected $token;
-        protected $header;
+        	protected $token;
+        	protected $header;
 
 		public function setUp()
 		{
